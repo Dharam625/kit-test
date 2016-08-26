@@ -1,0 +1,31 @@
+@import "globals";
+@import "navigation";
+
+body {
+  font-family: ‘Times New Roman’, Times, serif;
+  background-color: $text-color;
+  margin: 0;
+
+  .container {
+    margin-top: 40px;
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+      input[type=text] {
+        width: 240px;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}

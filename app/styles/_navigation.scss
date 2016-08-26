@@ -1,0 +1,97 @@
+.navigation {
+  top: 0;
+  position: fixed;
+  height: 40px;
+	width: 100%;
+  background-color: $navigation-menu-bg-color;
+  color: $text-color;
+
+  ul {
+    padding: 0;
+	  margin: 0;
+  }
+
+  li {
+    display: inline;
+    float: left;
+  }
+
+  a {
+  	display: inline-block;
+	  width: 140px;
+	  text-align: center;
+	  text-decoration: none;
+	  padding: 10px 0;
+    color: $text-color;
+    text-decoration:none;
+  }
+
+  li:hover {
+    background-color: $navigation-menu-hover-color;
+  }
+
+  a#expand-menu {
+	  display: none;
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  .navigation {
+		height: auto;
+		border-bottom: 0;
+
+	  ul {
+		  display: none;
+		  height: auto;
+	  }
+
+	  li {
+		  width: 100%;
+		  float: left;
+		  position: relative;
+    }
+
+  	a {
+	  	text-align: left;
+	  	width: 100%;
+	  	text-indent: 25px;
+			background: $navigation-menu-bg-color;
+      border-bottom: 1px solid $navigation-menu-border-color;
+  	}
+
+  	a:hover {
+	  	background: $navigation-menu-hover-color;
+  	}
+
+	  a#expand-menu:after {
+		  content:"|||";
+      transform:rotate(-90deg);
+      -ms-transform:rotate(-90deg);
+      -webkit-transform:rotate(-90deg);
+		  width: 30px;
+		  height: 30px;
+		  display: inline-block;
+		  position: absolute;
+		  right: 5px;
+		  top: 20px;
+	  }
+
+	  a#expand-menu {
+		  display: block;
+		  background-color: $navigation-menu-bg-color;
+		  width: 100%;
+		  position: relative;
+	  }
+  }
+}
+
+.navigation-bar:before, .navigation-bar:after {
+  content:"";
+  display:table;
+}
+.navigation-bar:after {
+  clear:both;
+}
+.navigation-bar {
+  zoom:1;
+}

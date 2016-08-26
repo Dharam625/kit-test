@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-app="kitTestApp" ng-cloak>
+    <nav class="navigation navigation-bar">
+      <a href="#" id="expand-menu" ng-click="toggle=!toggle">MENU</a>
+      <ul class="navigation-bar" slide-toggle-directive="toggle">
+        <li>
+          <a href="#home">{{'profileTabName'| translate }}</a>
+        </li>
+        <li>
+          <a href="#technicalResource">{{'techResourceTabName'| translate }}</a>
+        </li>
+        <li>
+          <a href="#jsApplication">{{'jsAppTabName'| translate }}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/utility.js"></script>
+    <script src="scripts/controllers/pigLatinTranslator.js"></script>
+    <script src="scripts/directives/toggleSliderDirective.js"></script>
+    <script src="scripts/controllers/profile.js"></script>
+    <script src="scripts/controllers/technicalResourceInfo.js"></script>
+
+  </body>
+</html>
